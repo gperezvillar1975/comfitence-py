@@ -1,0 +1,541 @@
+[2022-12-16 16:42:35 +0000] [23026] [INFO] Starting gunicorn 20.1.0
+[2022-12-16 16:42:35 +0000] [23026] [INFO] Listening at: https://137.184.187.8:8081 (23026)
+[2022-12-16 16:42:35 +0000] [23026] [INFO] Using worker: threads
+[2022-12-16 16:42:35 +0000] [23027] [INFO] Booting worker with pid: 23027
+[2022-12-16 16:42:36 +0000] [23028] [INFO] Booting worker with pid: 23028
+[2022-12-16 16:42:36 +0000] [23029] [INFO] Booting worker with pid: 23029
+[2022-12-16 16:42:36 +0000] [23030] [INFO] Booting worker with pid: 23030
+[2022-12-16 16:43:43 +0000] [23026] [INFO] Handling signal: hup
+[2022-12-16 16:43:43 +0000] [23026] [INFO] Hang up: Master
+[2022-12-16 16:43:43 +0000] [23026] [WARNING] Worker with pid 23027 was terminated due to signal 1
+[2022-12-16 16:43:43 +0000] [23026] [WARNING] Worker with pid 23028 was terminated due to signal 1
+[2022-12-16 16:43:43 +0000] [23026] [WARNING] Worker with pid 23029 was terminated due to signal 1
+[2022-12-16 16:43:43 +0000] [23026] [WARNING] Worker with pid 23030 was terminated due to signal 1
+[2022-12-16 16:43:43 +0000] [23042] [INFO] Booting worker with pid: 23042
+[2022-12-16 16:43:43 +0000] [23043] [INFO] Booting worker with pid: 23043
+[2022-12-16 16:43:43 +0000] [23044] [INFO] Booting worker with pid: 23044
+[2022-12-16 16:43:43 +0000] [23045] [INFO] Booting worker with pid: 23045
+[2022-12-19 10:58:46,643] ERROR in app: Exception on /get_image [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/app/simpleserver.py", line 65, in decorator
+    return f(current_user, *args, **kwargs)
+  File "/root/app/simpleserver.py", line 118, in get_image
+    return send_file(request.data.decode())
+  File "/usr/local/lib/python3.10/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.10/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/app/smiley.jpg  '
+[2022-12-19 10:59:09,044] ERROR in app: Exception on /get_image [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/app/simpleserver.py", line 65, in decorator
+    return f(current_user, *args, **kwargs)
+  File "/root/app/simpleserver.py", line 118, in get_image
+    return send_file(request.data.decode())
+  File "/usr/local/lib/python3.10/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.10/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/app/smiley.jpg  '
+[2022-12-19 10:59:17,931] ERROR in app: Exception on /get_image [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/app/simpleserver.py", line 65, in decorator
+    return f(current_user, *args, **kwargs)
+  File "/root/app/simpleserver.py", line 118, in get_image
+    return send_file(request.data.decode())
+  File "/usr/local/lib/python3.10/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.10/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/app/smiley.jpg  '
+[2022-12-19 10:59:47,454] ERROR in app: Exception on /get_image [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/app/simpleserver.py", line 65, in decorator
+    return f(current_user, *args, **kwargs)
+  File "/root/app/simpleserver.py", line 118, in get_image
+    return send_file(request.data.decode())
+  File "/usr/local/lib/python3.10/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.10/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/app/smiley.jpg  '
+[2022-12-19 11:00:01,757] ERROR in app: Exception on /get_image [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.10/dist-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.10/dist-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/root/app/simpleserver.py", line 65, in decorator
+    return f(current_user, *args, **kwargs)
+  File "/root/app/simpleserver.py", line 118, in get_image
+    return send_file(request.data.decode())
+  File "/usr/local/lib/python3.10/dist-packages/flask/helpers.py", line 537, in send_file
+    return werkzeug.utils.send_file(  # type: ignore[return-value]
+  File "/usr/local/lib/python3.10/dist-packages/werkzeug/utils.py", line 440, in send_file
+    stat = os.stat(path)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/app/smiley.jpg  '
+[2022-12-19 17:16:17 +0000] [23026] [INFO] Handling signal: term
+[2022-12-19 17:16:17 +0000] [23045] [INFO] Worker exiting (pid: 23045)
+in health
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley2.png'
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley2.png'
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley2.png'
+[2022-12-19 17:16:17 +0000] [23042] [INFO] Worker exiting (pid: 23042)
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg  '
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg  '
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+[2022-12-19 17:16:17 +0000] [23043] [INFO] Worker exiting (pid: 23043)
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg  '
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg  '
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg  '
+INSIDE LOGIN
+in get_image
+args: <Users 1>
+kwargs: {}
+data is: b'smiley.jpg'
+[2022-12-19 17:16:48 +0000] [58782] [INFO] Starting gunicorn 20.1.0
+[2022-12-19 17:16:48 +0000] [58782] [INFO] Listening at: https://137.184.187.8:8081 (58782)
+[2022-12-19 17:16:48 +0000] [58782] [INFO] Using worker: threads
+[2022-12-19 17:16:48 +0000] [58783] [INFO] Booting worker with pid: 58783
+[2022-12-19 17:16:49 +0000] [58784] [INFO] Booting worker with pid: 58784
+[2022-12-19 17:16:49 +0000] [58785] [INFO] Booting worker with pid: 58785
+[2022-12-19 17:16:49 +0000] [58786] [INFO] Booting worker with pid: 58786
+[2022-12-19 17:19:52 +0000] [58782] [INFO] Handling signal: term
+[2022-12-19 17:19:52 +0000] [58782] [WARNING] Worker with pid 58785 was terminated due to signal 1
+[2022-12-19 17:19:52 +0000] [58782] [WARNING] Worker with pid 58783 was terminated due to signal 1
+[2022-12-19 17:19:52 +0000] [58782] [WARNING] Worker with pid 58786 was terminated due to signal 1
+[2022-12-19 17:19:52 +0000] [58782] [WARNING] Worker with pid 58784 was terminated due to signal 1
+[2022-12-19 17:19:52 +0000] [58782] [INFO] Shutting down: Master
+[2022-12-20 04:29:50 +0000] [5402] [INFO] Starting gunicorn 20.1.0
+[2022-12-20 04:29:50 +0000] [5402] [INFO] Listening at: https://137.184.187.8:8081 (5402)
+[2022-12-20 04:29:50 +0000] [5402] [INFO] Using worker: threads
+[2022-12-20 04:29:50 +0000] [5403] [INFO] Booting worker with pid: 5403
+[2022-12-20 04:29:50 +0000] [5404] [INFO] Booting worker with pid: 5404
+[2022-12-20 04:29:50 +0000] [5405] [INFO] Booting worker with pid: 5405
+[2022-12-20 04:29:50 +0000] [5406] [INFO] Booting worker with pid: 5406
+[2022-12-20 04:30:01 +0000] [5402] [INFO] Handling signal: int
+[2022-12-20 04:30:01 +0000] [5406] [INFO] Worker exiting (pid: 5406)
+[2022-12-20 04:30:01 +0000] [5403] [INFO] Worker exiting (pid: 5403)
+in health
+[2022-12-20 04:30:01 +0000] [5405] [INFO] Worker exiting (pid: 5405)
+[2022-12-20 04:30:01 +0000] [5404] [INFO] Worker exiting (pid: 5404)
+[2022-12-20 04:30:02 +0000] [5402] [INFO] Shutting down: Master
+[2022-12-20 04:30:10 +0000] [5418] [INFO] Starting gunicorn 20.1.0
+[2022-12-20 04:30:10 +0000] [5418] [INFO] Listening at: https://137.184.187.8:8081 (5418)
+[2022-12-20 04:30:10 +0000] [5418] [INFO] Using worker: threads
+[2022-12-20 04:30:10 +0000] [5419] [INFO] Booting worker with pid: 5419
+[2022-12-20 04:30:10 +0000] [5420] [INFO] Booting worker with pid: 5420
+[2022-12-20 04:30:10 +0000] [5421] [INFO] Booting worker with pid: 5421
+[2022-12-20 04:30:10 +0000] [5422] [INFO] Booting worker with pid: 5422
+[2022-12-20 04:55:41 +0000] [5418] [INFO] Handling signal: term
+[2022-12-20 04:55:41 +0000] [5419] [INFO] Worker exiting (pid: 5419)
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+[2022-12-20 04:55:41 +0000] [5422] [INFO] Worker exiting (pid: 5422)
+in health
+in health
+in health
+[2022-12-20 04:55:41 +0000] [5420] [INFO] Worker exiting (pid: 5420)
+in get_images
+args: <Users 1>
+kwargs: {}
+[2022-12-20 04:55:41 +0000] [5421] [INFO] Worker exiting (pid: 5421)
+INSIDE LOGIN
+INSIDE LOGIN
+[2022-12-20 04:55:42 +0000] [5418] [INFO] Shutting down: Master
+[2022-12-20 04:57:31 +0000] [5739] [INFO] Starting gunicorn 20.1.0
+[2022-12-20 04:57:31 +0000] [5739] [INFO] Listening at: https://137.184.187.8:8081 (5739)
+[2022-12-20 04:57:31 +0000] [5739] [INFO] Using worker: threads
+[2022-12-20 04:57:31 +0000] [5740] [INFO] Booting worker with pid: 5740
+[2022-12-20 04:57:31 +0000] [5741] [INFO] Booting worker with pid: 5741
+[2022-12-20 04:57:31 +0000] [5742] [INFO] Booting worker with pid: 5742
+[2022-12-20 04:57:31 +0000] [5743] [INFO] Booting worker with pid: 5743
+[2022-12-20 04:58:56 +0000] [5739] [INFO] Handling signal: term
+[2022-12-20 04:58:56 +0000] [5739] [WARNING] Worker with pid 5740 was terminated due to signal 1
+[2022-12-20 04:58:56 +0000] [5739] [WARNING] Worker with pid 5741 was terminated due to signal 1
+[2022-12-20 04:58:56 +0000] [5739] [WARNING] Worker with pid 5743 was terminated due to signal 1
+[2022-12-20 04:58:56 +0000] [5739] [WARNING] Worker with pid 5742 was terminated due to signal 1
+[2022-12-20 04:58:56 +0000] [5739] [INFO] Shutting down: Master
+[2022-12-20 05:05:20 +0000] [836] [INFO] Starting gunicorn 20.1.0
+[2022-12-20 05:05:20 +0000] [836] [INFO] Listening at: https://137.184.187.8:8081 (836)
+[2022-12-20 05:05:20 +0000] [836] [INFO] Using worker: threads
+[2022-12-20 05:05:20 +0000] [837] [INFO] Booting worker with pid: 837
+[2022-12-20 05:05:20 +0000] [838] [INFO] Booting worker with pid: 838
+[2022-12-20 05:05:20 +0000] [840] [INFO] Booting worker with pid: 840
+[2022-12-20 05:05:20 +0000] [839] [INFO] Booting worker with pid: 839
+[2022-12-20 05:38:52 +0000] [836] [INFO] Handling signal: hup
+[2022-12-20 05:38:52 +0000] [836] [INFO] Hang up: Master
+[2022-12-20 05:38:52 +0000] [836] [WARNING] Worker with pid 840 was terminated due to signal 1
+[2022-12-20 05:38:52 +0000] [836] [WARNING] Worker with pid 837 was terminated due to signal 1
+[2022-12-20 05:38:52 +0000] [836] [WARNING] Worker with pid 838 was terminated due to signal 1
+[2022-12-20 05:38:52 +0000] [836] [WARNING] Worker with pid 839 was terminated due to signal 1
+[2022-12-20 05:38:52 +0000] [1446] [INFO] Booting worker with pid: 1446
+[2022-12-20 05:38:52 +0000] [1447] [INFO] Booting worker with pid: 1447
+[2022-12-20 05:38:52 +0000] [1448] [INFO] Booting worker with pid: 1448
+[2022-12-20 05:38:52 +0000] [1449] [INFO] Booting worker with pid: 1449
+[2022-12-21 04:38:33 +0000] [836] [INFO] Handling signal: term
+[2022-12-21 04:38:33 +0000] [1446] [INFO] Worker exiting (pid: 1446)
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+in health
+in health
+[2022-12-21 04:38:33 +0000] [1448] [INFO] Worker exiting (pid: 1448)
+[2022-12-21 04:38:33 +0000] [1449] [INFO] Worker exiting (pid: 1449)
+[2022-12-21 04:38:34 +0000] [1447] [INFO] Worker exiting (pid: 1447)
+[2022-12-21 04:38:34 +0000] [836] [INFO] Shutting down: Master
+[2022-12-21 06:27:17 +0000] [3252] [INFO] Starting gunicorn 20.1.0
+[2022-12-21 06:27:17 +0000] [3252] [INFO] Listening at: https://137.184.187.8:8081 (3252)
+[2022-12-21 06:27:17 +0000] [3252] [INFO] Using worker: threads
+[2022-12-21 06:27:17 +0000] [3253] [INFO] Booting worker with pid: 3253
+[2022-12-21 06:27:17 +0000] [3254] [INFO] Booting worker with pid: 3254
+[2022-12-21 06:27:18 +0000] [3255] [INFO] Booting worker with pid: 3255
+[2022-12-21 06:27:18 +0000] [3256] [INFO] Booting worker with pid: 3256
+[2022-12-21 06:46:25 +0000] [3252] [INFO] Handling signal: hup
+[2022-12-21 06:46:25 +0000] [3252] [INFO] Hang up: Master
+[2022-12-21 06:46:25 +0000] [3252] [WARNING] Worker with pid 3254 was terminated due to signal 1
+[2022-12-21 06:46:25 +0000] [3252] [WARNING] Worker with pid 3255 was terminated due to signal 1
+[2022-12-21 06:46:25 +0000] [3252] [WARNING] Worker with pid 3256 was terminated due to signal 1
+[2022-12-21 06:46:25 +0000] [3252] [WARNING] Worker with pid 3253 was terminated due to signal 1
+[2022-12-21 06:46:25 +0000] [3329] [INFO] Booting worker with pid: 3329
+[2022-12-21 06:46:25 +0000] [3330] [INFO] Booting worker with pid: 3330
+[2022-12-21 06:46:25 +0000] [3332] [INFO] Booting worker with pid: 3332
+[2022-12-21 06:46:25 +0000] [3331] [INFO] Booting worker with pid: 3331
+[2023-01-03 08:45:08 +0000] [3252] [CRITICAL] WORKER TIMEOUT (pid:3332)
+[2023-01-03 08:45:09 +0000] [3332] [INFO] Worker exiting (pid: 3332)
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+in get_images
+args: <Users 1>
+kwargs: {}
+INSIDE LOGIN
+[2023-01-03 08:45:39 +0000] [3252] [WARNING] Worker with pid 3332 was terminated due to signal 9
+[2023-01-03 08:45:39 +0000] [194031] [INFO] Booting worker with pid: 194031
+[2023-01-03 18:32:31 +0000] [3252] [INFO] Handling signal: term
+[2023-01-03 18:32:31 +0000] [194031] [INFO] Worker exiting (pid: 194031)
+[2023-01-03 18:33:01 +0000] [3252] [WARNING] Worker with pid 3329 was terminated due to signal 9
+[2023-01-03 18:33:01 +0000] [3252] [INFO] Shutting down: Master

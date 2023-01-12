@@ -1,0 +1,20 @@
+[2023-01-09 18:40:30 +0000] [99740] [INFO] Starting gunicorn 20.1.0
+[2023-01-09 18:40:30 +0000] [99740] [INFO] Listening at: https://137.184.187.8:8081 (99740)
+[2023-01-09 18:40:30 +0000] [99740] [INFO] Using worker: threads
+[2023-01-09 18:40:30 +0000] [99741] [INFO] Booting worker with pid: 99741
+[2023-01-09 18:40:30 +0000] [99742] [INFO] Booting worker with pid: 99742
+[2023-01-09 18:40:30 +0000] [99743] [INFO] Booting worker with pid: 99743
+[2023-01-09 18:40:30 +0000] [99744] [INFO] Booting worker with pid: 99744
+[2023-01-09 18:40:30 +0000] [99745] [INFO] Booting worker with pid: 99745
+[2023-01-10 08:00:05 +0000] [99740] [INFO] Handling signal: hup
+[2023-01-10 08:00:05 +0000] [99740] [INFO] Hang up: Master
+[2023-01-10 08:00:05 +0000] [99740] [WARNING] Worker with pid 99741 was terminated due to signal 1
+[2023-01-10 08:00:05 +0000] [99740] [WARNING] Worker with pid 99742 was terminated due to signal 1
+[2023-01-10 08:00:05 +0000] [99740] [WARNING] Worker with pid 99743 was terminated due to signal 1
+[2023-01-10 08:00:05 +0000] [99740] [WARNING] Worker with pid 99744 was terminated due to signal 1
+[2023-01-10 08:00:05 +0000] [99740] [WARNING] Worker with pid 99745 was terminated due to signal 1
+[2023-01-10 08:00:05 +0000] [107284] [INFO] Booting worker with pid: 107284
+[2023-01-10 08:00:05 +0000] [107285] [INFO] Booting worker with pid: 107285
+[2023-01-10 08:00:05 +0000] [107286] [INFO] Booting worker with pid: 107286
+[2023-01-10 08:00:05 +0000] [107287] [INFO] Booting worker with pid: 107287
+[2023-01-10 08:00:05 +0000] [107288] [INFO] Booting worker with pid: 107288
